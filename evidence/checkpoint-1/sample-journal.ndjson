@@ -1,0 +1,7 @@
+{"type":"run_start","run_id":"schema-preflight","source":"synthetic","measurement_s":2.0,"workers":2,"hot_keys":1}
+{"type":"attempt","run_id":"schema-preflight","tx_id":"tx-001","key":"counter/0","attempt":1,"started_ns":0,"ended_ns":30000000,"commit_attempted":true,"outcome":"committed","error_code":null,"old_value":0,"new_value":1}
+{"type":"attempt","run_id":"schema-preflight","tx_id":"tx-002","key":"counter/0","attempt":1,"started_ns":40000000,"ended_ns":60000000,"commit_attempted":true,"outcome":"conflict","error_code":"not_committed","old_value":0,"new_value":1}
+{"type":"attempt","run_id":"schema-preflight","tx_id":"tx-002","key":"counter/0","attempt":2,"started_ns":70000000,"ended_ns":130000000,"commit_attempted":true,"outcome":"committed","error_code":null,"old_value":1,"new_value":2}
+{"type":"fault","run_id":"schema-preflight","at_ns":1000000000,"process_role":"storage","process_id":"example-process"}
+{"type":"snapshot","run_id":"schema-preflight","key":"counter/0","value":2,"markers":[{"tx_id":"tx-001","old_value":0,"new_value":1},{"tx_id":"tx-002","old_value":1,"new_value":2}]}
+{"type":"run_end","run_id":"schema-preflight","confirmed":2,"terminal_failures":0,"lost_confirmed":0}
